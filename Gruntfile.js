@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     //    scripts: {
     //      files: ['public/js/main.js'],
     //      tasks: ['uglify'],
-    ///      options: {
+    //      options: {
     //        spawn: false
     //      }
     //    },
