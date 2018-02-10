@@ -22,7 +22,6 @@ io.attach(server);
 io.on('connection', socket =>{ //function(socket) {...}
   console.log('a user has connected!');
   io.emit('chat message', {for : 'everyone', message : `${socket.id} is here`});
-
   //send message
   socket.on('chat message', msg => {
     io.emit('chat message', {for : 'everyone', message: msg});
@@ -33,4 +32,5 @@ io.on('connection', socket =>{ //function(socket) {...}
 
     io.emit('disconnect message', `${socket.id} has left the building!` );
   })
+
 });
