@@ -6,7 +6,18 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<input type="text" class="nickname" placeholder="What is your nickname?">
+	<div class="welcome">
+		<input type="text" class="nickname" placeholder="What is your nickname?">
+		<p id="colortext">Please choose a color!</p>
+		<div class="colorCon">
+			<div id="blue" class="colordiv"></div>
+			<div id="red" class="colordiv"></div>
+			<div id="green" class="colordiv"></div>
+			<div id="purple" class="colordiv"></div>
+			<div id="yellow" class="colordiv"></div>
+		</div>
+		<div id="enter"><p>ENTER</p></div>
+	</div>
 	<ul id="messages"></ul>
 	<form>
 		<input class="message" type="text" id="m" autocomplete="off">
@@ -14,5 +25,8 @@
 	</form>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
+	<script src="js/ScrollToPlugin.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/vendor/jquery.js"></script>
 </body>
 </html>

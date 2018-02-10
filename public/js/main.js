@@ -5,7 +5,12 @@
       chatForm = document.querySelector('form'),
       nameInput = document.querySelector('.nickname'),
       chatMessage = chatForm.querySelector('.message'),
-      nickName = null;
+      nickName = null,
+      welpage = document.querySelector('.welcome'),
+      colorall = document.querySelector('.colorCon'),
+      colorsing = colorall.querySelectorAll('.colordiv'),
+      enterbutton = document.querySelector('#enter'),
+      appliedClass;
 
 
   function setNickname() {
@@ -26,7 +31,7 @@
 
   function handleSendMessage(e) {
     e.preventDefault(); //block default behaviour (page refresh)
-    nickName = (nickName && nickName.length > 0) ? nickName : "user";
+    nickName = (nickName && nickName.length > 0) ? nickName : "A user";
 
     msg = `${nickName} says ${chatMessage.value}`;
 
@@ -35,10 +40,31 @@
     return false;
   }
 
+  function applycolor(){
+
+    messageList.style.color = this.id;
+
+    colorsing.forEach(function(elements, index){
+    elements.classList.remove('choose');
+    });
+
+    this.classList.add('choose');
+  }
+
+  function enterchat() {
+    TweenMax.to(welpage, 1, { css:{top:"-1000"}});
+  };
 
 
 
 
+
+
+
+  colorsing.forEach(function(elements){
+  elements.addEventListener('click', applycolor, false);
+  });
+  enterbutton.addEventListener('click', enterchat, false);
   nameInput.addEventListener('change', setNickname, false);
   chatForm.addEventListener('submit', handleSendMessage, false);
   socket.addEventListener('chat message', appendMessage, false);

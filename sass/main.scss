@@ -3,7 +3,7 @@
 	margin: 0; padding: 0; box-sizing: border-box;
 }
 
-body { font: 13px Helvetica, Arial; }
+body { font: 20px Helvetica, Arial; background-color: black; color: white;}
 
 form {
 	background: #000;
@@ -12,14 +12,106 @@ form {
 	bottom: 0;
 	width: 100%;
 
+
 	input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%; }
 
 	button { width: 9%; background: rgb(130, 224,255); border: none; padding: 10px; }
 }
 
 #messages {
-	list-style-type: none; margin: 0; padding: 0;
+	list-style-type: none; margin: 0; padding: 0; color: white;
 
-	li { padding: 5px 10px;	}
-	li:nth-child(odd) { background: #eee; }
+	li { padding: 5px 10px;}
+	li:nth-child(odd) { background: #666666;}
+	li:first-child { text-align: center;}
+}
+
+.nickname {
+	width: 20%;
+	margin-left: 40%;
+	height: 50px;
+	font-size: 24px;
+	color: #3399cc;
+	background-color: #515151;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20%;
+}
+
+.msg {
+	color: red;
+}
+
+.welcome {
+	width: 100%;
+	background-color: #515151;
+	height: 100vh;
+	position: fixed;
+	z-index: 5000;
+	display: block;
+}
+
+#colortext {
+	margin-top: 5%;
+	color: white;
+	text-align: center;
+}
+
+.colorCon {
+	width: 100%;
+}
+
+.colordiv {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-top: 2%;
+	opacity: 1;
+	transform: scale(1);
+	transition: 0.5s all ease;
+
+}
+
+.colordiv:hover {
+	cursor: pointer;
+}
+
+#blue {
+	margin-left: 45%;
+
+	background-color: blue;
+}
+
+#red {
+	background-color: red;
+}
+
+#green {
+	background-color: green;
+}
+
+#purple {
+	background-color: purple;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#enter {
+	clear: both;
+	text-align: center;
+	padding-top: 2%;
+}
+
+#enter:hover {
+	cursor: pointer;
+}
+
+.choose {
+	border: 1px solid white;
 }
